@@ -14,6 +14,7 @@ class AdminCategoryController extends AdminBase
     {
         // Проверка доступа
         self::checkAdmin();
+        
 
         // Получаем список категорий
         $categoriesList = Category::getCategoriesListAdmin();
@@ -30,6 +31,7 @@ class AdminCategoryController extends AdminBase
     {
         // Проверка доступа
         self::checkAdmin();
+
 
         // Обработка формы
         if (isset($_POST['submit'])) {
@@ -70,6 +72,7 @@ class AdminCategoryController extends AdminBase
         // Проверка доступа
         self::checkAdmin();
 
+
         // Получаем данные о конкретной категории
         $category = Category::getCategoryById($id);
 
@@ -100,6 +103,7 @@ class AdminCategoryController extends AdminBase
     {
         // Проверка доступа
         self::checkAdmin();
+
 
         // Обработка формы
         if (isset($_POST['submit'])) {

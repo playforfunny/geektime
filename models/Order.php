@@ -8,12 +8,12 @@ class Order
 
     /**
      * Сохранение заказа 
-     * @param string $userName <p>Имя</p>
-     * @param string $userPhone <p>Телефон</p>
-     * @param string $userComment <p>Комментарий</p>
-     * @param integer $userId <p>id пользователя</p>
-     * @param array $products <p>Массив с товарами</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param string $userName Имя
+     * @param string $userPhone Телефон
+     * @param string $userComment Комментарий
+     * @param integer $userId id пользователя
+     * @param array $products Массив с товарами
+     * @return boolean Результат выполнения метода
      */
     public static function save($userName, $userPhone, $userComment, $userId, $products)
     {
@@ -38,7 +38,7 @@ class Order
 
     /**
      * Возвращает список заказов
-     * @return array <p>Список заказов</p>
+     * @return array Список заказов
      */
     public static function getOrdersList()
     {
@@ -61,10 +61,10 @@ class Order
     }
 
     /**
-     * Возвращает текстое пояснение статуса для заказа :<br/>
+     * Возвращает текстое пояснение статуса для заказа :
      * <i>1 - Новый заказ, 2 - В обработке, 3 - Доставляется, 4 - Закрыт</i>
-     * @param integer $status <p>Статус</p>
-     * @return string <p>Текстовое пояснение</p>
+     * @param integer $status Статус
+     * @return string Текстовое пояснение
      */
     public static function getStatusText($status)
     {
@@ -86,8 +86,8 @@ class Order
 
     /**
      * Возвращает заказ с указанным id 
-     * @param integer $id <p>id</p>
-     * @return array <p>Массив с информацией о заказе</p>
+     * @param integer $id
+     * @return array Массив с информацией о заказе
      */
     public static function getOrderById($id)
     {
@@ -112,8 +112,8 @@ class Order
 
     /**
      * Удаляет заказ с заданным id
-     * @param integer $id <p>id заказа</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param integer $id - id заказа
+     * @return boolean Результат выполнения метода
      */
     public static function deleteOrderById($id)
     {
@@ -131,13 +131,13 @@ class Order
 
     /**
      * Редактирует заказ с заданным id
-     * @param integer $id <p>id товара</p>
-     * @param string $userName <p>Имя клиента</p>
-     * @param string $userPhone <p>Телефон клиента</p>
-     * @param string $userComment <p>Комментарий клиента</p>
-     * @param string $date <p>Дата оформления</p>
-     * @param integer $status <p>Статус <i>(включено "1", выключено "0")</i></p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param integer $id id товара
+     * @param string $userName Имя клиента
+     * @param string $userPhone Телефон клиента
+     * @param string $userComment Комментарий клиента
+     * @param string $date Дата оформления
+     * @param integer $status Статус (включено "1", выключено "0")
+     * @return boolean Результат выполнения метода
      */
     public static function updateOrderById($id, $userName, $userPhone, $userComment, $date, $status)
     {

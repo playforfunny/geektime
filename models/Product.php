@@ -9,11 +9,10 @@ class Product
     // Количество отображаемых товаров по умолчанию
     const SHOW_BY_DEFAULT = 6;
 
-    /**
-     * Возвращает массив последних товаров
-     * @param type $count [optional] <p>Количество</p>
-     * @param type $page [optional] <p>Номер текущей страницы</p>
-     * @return array <p>Массив с товарами</p>
+
+    /** Возвращает массив последних товаров
+     * @param int $count
+     * @return array
      */
     public static function getLatestProducts($count = self::SHOW_BY_DEFAULT)
     {
@@ -50,9 +49,9 @@ class Product
 
     /**
      * Возвращает список товаров в указанной категории
-     * @param type $categoryId <p>id категории</p>
-     * @param type $page [optional] <p>Номер страницы</p>
-     * @return type <p>Массив с товарами</p>
+     * @param $categoryId id категории
+     * @param $page [optional] Номер страницы
+     * @return type Массив с товарами
      */
     public static function getProductsListByCategory($categoryId, $page = 1)
     {
@@ -92,8 +91,8 @@ class Product
 
     /**
      * Возвращает продукт с указанным id
-     * @param integer $id <p>id товара</p>
-     * @return array <p>Массив с информацией о товаре</p>
+     * @param $id id товара
+     * @return array Массив с информацией о товаре
      */
     public static function getProductById($id)
     {
@@ -119,7 +118,7 @@ class Product
 
     /**
      * Возвращаем количество товаров в указанной категории
-     * @param integer $categoryId
+     * @param $categoryId
      * @return integer
      */
     public static function getTotalProductsInCategory($categoryId)
@@ -144,8 +143,8 @@ class Product
 
     /**
      * Возвращает список товаров с указанными индентификторами
-     * @param array $idsArray <p>Массив с идентификаторами</p>
-     * @return array <p>Массив со списком товаров</p>
+     * @param $idsArray Массив с идентификаторами
+     * @return array Массив со списком товаров
      */
     public static function getProdustsByIds($idsArray)
     {
@@ -178,7 +177,7 @@ class Product
 
     /**
      * Возвращает список рекомендуемых товаров
-     * @return array <p>Массив с товарами</p>
+     * @return array Массив с товарами
      */
     public static function getRecommendedProducts()
     {
@@ -203,7 +202,7 @@ class Product
 
     /**
      * Возвращает список товаров
-     * @return array <p>Массив с товарами</p>
+     * @return array Массив с товарами
      */
     public static function getProductsList()
     {
@@ -226,8 +225,8 @@ class Product
 
     /**
      * Удаляет товар с указанным id
-     * @param integer $id <p>id товара</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param $id id товара
+     * @return boolean Результат выполнения метода
      */
     public static function deleteProductById($id)
     {
@@ -245,9 +244,9 @@ class Product
 
     /**
      * Редактирует товар с заданным id
-     * @param integer $id <p>id товара</p>
-     * @param array $options <p>Массив с информацей о товаре</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param $id id товара
+     * @param $options Массив с информацей о товаре
+     * @return boolean Результат выполнения метода
      */
     public static function updateProductById($id, $options)
     {
@@ -287,8 +286,8 @@ class Product
 
     /**
      * Добавляет новый товар
-     * @param array $options <p>Массив с информацией о товаре</p>
-     * @return integer <p>id добавленной в таблицу записи</p>
+     * @param $options Массив с информацией о товаре
+     * @return integer id добавленной в таблицу записи
      */
     public static function createProduct($options)
     {
@@ -324,10 +323,10 @@ class Product
     }
 
     /**
-     * Возвращает текстое пояснение наличия товара:<br/>
-     * <i>0 - Под заказ, 1 - В наличии</i>
-     * @param integer $availability <p>Статус</p>
-     * @return string <p>Текстовое пояснение</p>
+     * Возвращает текстое пояснение наличия товара:
+     * 0 - Под заказ, 1 - В наличии
+     * @param $availability Статус
+     * @return string Текстовое пояснение
      */
     public static function getAvailabilityText($availability)
     {
@@ -343,8 +342,8 @@ class Product
 
     /**
      * Возвращает путь к изображению
-     * @param integer $id
-     * @return string <p>Путь к изображению</p>
+     * @param $id
+     * @return string Путь к изображению
      */
     public static function getImage($id)
     {

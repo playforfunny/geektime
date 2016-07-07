@@ -9,8 +9,10 @@ class ProductController
 
     /**
      * Action для страницы просмотра товара
-     * @param integer $productId <p>id товара</p>
+     * @param integer $productId id товара
      */
+
+
     public function actionView($productId)
     {
         // Список категорий для левого меню

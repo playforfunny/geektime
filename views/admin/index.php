@@ -15,9 +15,10 @@
             <br/>
             
             <ul>
-                <li><a href="/admin/product">Управление товарами</a></li>
-                <li><a href="/admin/category">Управление категориями</a></li>
-                <li><a href="/admin/order">Управление заказами</a></li>
+                <li><a href="/admin/product">Управление Товарами</a></li>
+                <li><a href="/admin/category">Управление Категориями</a></li>
+                <li><a href="/admin/order">Управление Заказами</a></li>
+                <li><a href="/admin/users">Управление Пользователями</a></li>
             </ul>
             
         </div>

@@ -42,6 +42,7 @@ class CatalogController
 
         // Подключаем вид
         require_once(ROOT . '/views/catalog/category.php');
+        
         return true;
     }
 

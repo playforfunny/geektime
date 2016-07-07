@@ -6,12 +6,12 @@
 class User
 {
 
-    /**
-     * Регистрация пользователя 
-     * @param string $name <p>Имя</p>
-     * @param string $email <p>E-mail</p>
-     * @param string $password <p>Пароль</p>
-     * @return boolean <p>Результат выполнения метода</p>
+
+    /** Регистрация Пользователей
+     * @param $name
+     * @param $email
+     * @param $password
+     * @return bool
      */
     public static function register($name, $email, $password)
     {
@@ -30,12 +30,12 @@ class User
         return $result->execute();
     }
 
-    /**
-     * Редактирование данных пользователя
-     * @param integer $id <p>id пользователя</p>
-     * @param string $name <p>Имя</p>
-     * @param string $password <p>Пароль</p>
-     * @return boolean <p>Результат выполнения метода</p>
+
+     /** Редактирование данных пользователя
+     * @param $id
+     * @param $name
+     * @param $password
+     * @return bool
      */
     public static function edit($id, $name, $password)
     {
@@ -55,11 +55,11 @@ class User
         return $result->execute();
     }
 
-    /**
-     * Проверяем существует ли пользователь с заданными $email и $password
-     * @param string $email <p>E-mail</p>
-     * @param string $password <p>Пароль</p>
-     * @return mixed : integer user id or false
+
+    /** Проверяем существует ли пользователь с заданными $email и $password
+     * @param $email
+     * @param $password
+     * @return bool
      */
     public static function checkUserData($email, $password)
     {
@@ -87,7 +87,7 @@ class User
 
     /**
      * Запоминаем пользователя
-     * @param integer $userId <p>id пользователя</p>
+     * @param $userId id пользователя
      */
     public static function auth($userId)
     {
@@ -95,10 +95,11 @@ class User
         $_SESSION['user'] = $userId;
     }
 
+
     /**
-     * Возвращает идентификатор пользователя, если он авторизирован.<br/>
+     * Возвращает идентификатор пользователя, если он авторизирован.
      * Иначе перенаправляет на страницу входа
-     * @return string <p>Идентификатор пользователя</p>
+     * @return mixed
      */
     public static function checkLogged()
     {
@@ -112,7 +113,7 @@ class User
 
     /**
      * Проверяет является ли пользователь гостем
-     * @return boolean <p>Результат выполнения метода</p>
+     * @return boolean Результат выполнения метода
      */
     public static function isGuest()
     {
@@ -124,8 +125,8 @@ class User
 
     /**
      * Проверяет имя: не меньше, чем 2 символа
-     * @param string $name <p>Имя</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param $name Имя
+     * @return boolean Результат выполнения метода
      */
     public static function checkName($name)
     {
@@ -137,8 +138,8 @@ class User
 
     /**
      * Проверяет телефон: не меньше, чем 10 символов
-     * @param string $phone <p>Телефон</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param $phone Телефон
+     * @return boolean Результат выполнения метода
      */
     public static function checkPhone($phone)
     {
@@ -150,8 +151,8 @@ class User
 
     /**
      * Проверяет имя: не меньше, чем 6 символов
-     * @param string $password <p>Пароль</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param $password Пароль
+     * @return boolean Результат выполнения метода
      */
     public static function checkPassword($password)
     {
@@ -163,8 +164,8 @@ class User
 
     /**
      * Проверяет email
-     * @param string $email <p>E-mail</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param $email E-mail
+     * @return boolean Результат выполнения метода
      */
     public static function checkEmail($email)
     {
@@ -176,8 +177,8 @@ class User
 
     /**
      * Проверяет не занят ли email другим пользователем
-     * @param type $email <p>E-mail</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param $email E-mail
+     * @return boolean Результат выполнения метода
      */
     public static function checkEmailExists($email)
     {
@@ -199,8 +200,8 @@ class User
 
     /**
      * Возвращает пользователя с указанным id
-     * @param integer $id <p>id пользователя</p>
-     * @return array <p>Массив с информацией о пользователе</p>
+     * @param $id id пользователя
+     * @return array Массив с информацией о пользователе
      */
     public static function getUserById($id)
     {

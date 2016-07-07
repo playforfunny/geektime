@@ -24,8 +24,9 @@ class CartController
 
     /**
      * Action для добавления товара в корзину при помощи асинхронного запроса (ajax)
-     * @param integer $id <p>id товара</p>
-     */
+     * @param integer $id id товара
+     **/
+    
     public function actionAddAjax($id)
     {
         // Добавляем товар в корзину и печатаем результат: количество товаров в корзине
@@ -35,7 +36,7 @@ class CartController
     
     /**
      * Action для добавления товара в корзину синхронным запросом
-     * @param integer $id <p>id товара</p>
+     * @param integer $id id товара
      */
     public function actionDelete($id)
     {

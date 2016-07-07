@@ -35,6 +35,11 @@ return array(
     'admin/order/delete/([0-9]+)' => 'adminOrder/delete/$1',
     'admin/order/view/([0-9]+)' => 'adminOrder/view/$1',
     'admin/order' => 'adminOrder/index',
+    //Управление Пользователями
+    'admin/users/update/([0-9]+)' => 'adminUsers/update/$1',
+    'admin/users/delete/([0-9]+)' => 'adminUsers/delete/$1',
+    'admin/users' => 'adminUsers/index',
+
     // Админпанель:
     'admin' => 'admin/index',
     // О магазине

@@ -8,8 +8,9 @@ class Category
 
     /**
      * Возвращает массив категорий для списка на сайте
-     * @return array <p>Массив с категориями</p>
+     * @return array Массив с категориями
      */
+    
     public static function getCategoriesList()
     {
         // Соединение с БД
@@ -30,10 +31,11 @@ class Category
     }
 
     /**
-     * Возвращает массив категорий для списка в админпанели <br/>
+     * Возвращает массив категорий для списка в админпанели 
      * (при этом в результат попадают и включенные и выключенные категории)
-     * @return array <p>Массив категорий</p>
+     * @return array Массив категорий
      */
+    
     public static function getCategoriesListAdmin()
     {
         // Соединение с БД
@@ -58,7 +60,7 @@ class Category
     /**
      * Удаляет категорию с заданным id
      * @param integer $id
-     * @return boolean <p>Результат выполнения метода</p>
+     * @return boolean Результат выполнения метода
      */
     public static function deleteCategoryById($id)
     {
@@ -76,11 +78,11 @@ class Category
 
     /**
      * Редактирование категории с заданным id
-     * @param integer $id <p>id категории</p>
-     * @param string $name <p>Название</p>
-     * @param integer $sortOrder <p>Порядковый номер</p>
-     * @param integer $status <p>Статус <i>(включено "1", выключено "0")</i></p>
-     * @return boolean <p>Результат выполнения метода</p>
+     * @param integer $id id категории
+     * @param string $name Название
+     * @param integer $sortOrder Порядковый номер
+     * @param integer $status Статус (включено "1", выключено "0")
+     * @return boolean Результат выполнения метода
      */
     public static function updateCategoryById($id, $name, $sortOrder, $status)
     {
@@ -106,8 +108,8 @@ class Category
 
     /**
      * Возвращает категорию с указанным id
-     * @param integer $id <p>id категории</p>
-     * @return array <p>Массив с информацией о категории</p>
+     * @param integer $id id категории
+     * @return array Массив с информацией о категории
      */
     public static function getCategoryById($id)
     {
@@ -132,10 +134,10 @@ class Category
     }
 
     /**
-     * Возвращает текстое пояснение статуса для категории :<br/>
-     * <i>0 - Скрыта, 1 - Отображается</i>
-     * @param integer $status <p>Статус</p>
-     * @return string <p>Текстовое пояснение</p>
+     * Возвращает текстое пояснение статуса для категории :
+     * 0 - Скрыта, 1 - Отображается
+     * @param integer $status Статус
+     * @return string Текстовое пояснение
      */
     public static function getStatusText($status)
     {
@@ -151,10 +153,10 @@ class Category
 
     /**
      * Добавляет новую категорию
-     * @param string $name <p>Название</p>
-     * @param integer $sortOrder <p>Порядковый номер</p>
-     * @param integer $status <p>Статус <i>(включено "1", выключено "0")</i></p>
-     * @return boolean <p>Результат добавления записи в таблицу</p>
+     * @param string $name Название
+     * @param integer $sortOrder Порядковый номер
+     * @param integer $status Статус (включено "1", выключено "0")
+     * @return boolean Результат добавления записи в таблицу
      */
     public static function createCategory($name, $sortOrder, $status)
     {
